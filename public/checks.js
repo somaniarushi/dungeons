@@ -41,5 +41,9 @@ fairy.addEventListener('change', (e) => {
     socket.emit('visibility', {name: 'fairy', status: e.target.checked})
 })
 
+fiona.addEventListener('change', (e) => {
+    socket.emit('visibility', {name: 'fiona', status: e.target.checked})
+})
+
 
 

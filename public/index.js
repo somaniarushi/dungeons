@@ -1,8 +1,18 @@
 var socket = io();
 
 // DM overrides for display
-if (window.location.pathname !== '/dm') {
+if (window.location.pathname === '/dm') {
+    jack.style.display = 'block';
+    jessie.style.display = 'block';
+    corny.style.display = 'block';
+    fairy.style.display = 'block';
+    tristan.style.display = 'block';
+    dox.style.display = 'block';
     diamond.style.display = 'block';
+    hannah.style.display = 'block';
+    medcalf.style.display = 'block';
+    fiona.style.display = 'block';
+    fairy.style.display = 'block';
 }
 
 
