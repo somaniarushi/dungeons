@@ -6,6 +6,10 @@ objCorny.onmousedown = function(event) {
 
     console.log("an attempt to move")
 
+    if (window.location.pathname !== '/corny' && window.location.pathname !== '/dm') {
+      return;
+    }
+
     let shiftX = event.clientX - objCorny.getBoundingClientRect().left;
     let shiftY = event.clientY - objCorny.getBoundingClientRect().top;
 

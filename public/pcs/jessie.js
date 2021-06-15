@@ -6,6 +6,10 @@ objJessie.onmousedown = function(event) {
 
     console.log("an attempt to move")
 
+    if (window.location.pathname !== '/jessie' && window.location.pathname !== '/dm') {
+      return;
+    }
+
     let shiftX = event.clientX - objJessie.getBoundingClientRect().left;
     let shiftY = event.clientY - objJessie.getBoundingClientRect().top;
 

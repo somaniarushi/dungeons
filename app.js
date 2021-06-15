@@ -14,6 +14,23 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+//------ Serve to PCs -------//
+app.get('/jack', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
+app.get('/jessie', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
+app.get('/corny', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
+app.get('/dm', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 io.on('connection', (socket) => {
   console.log('new user connected');
   

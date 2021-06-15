@@ -6,6 +6,11 @@ objTristan.onmousedown = function(event) {
 
     console.log("an attempt to move")
 
+
+    if (window.location.pathname !== '/dm') {
+      return;
+    }
+
     let shiftX = event.clientX - objTristan.getBoundingClientRect().left;
     let shiftY = event.clientY - objTristan.getBoundingClientRect().top;
 
