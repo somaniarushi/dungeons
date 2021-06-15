@@ -3,18 +3,33 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-  <img src="https://en.js.cx/clipart/ball.svg" id="ball">
-  <img src="https://en.js.cx/clipart/soccer-gate.svg" id="gate">
+  <img src="images/jack.png" id="jack" class='icon'>
+  <img src="images/jessie.png" id="jessie" class='icon'>
+  <img src="images/corny.png" id="corny" class='icon'>
+
+  <img src="images/fairy.png" id="fairy" class='icon monster'>
+
+  <img src="images/tristan.png" id="tristan" class='icon npc'>
+  <img src="images/dox.png" id="dox" class='icon npc'>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script>var socket = io();</script>
-  <script src="ball.js"></script>
-  <script src="gate.js"></script>
+
+  <script src="index.js"></script>
+
+  <script src="pcs/jack.js"></script>
+  <script src="pcs/jessie.js"></script>
+  <script src="pcs/corny.js"></script>
+
+  <script src="monsters/fairy.js"></script>
+
+  <script src="npcs/tristan.js"></script>
+  <script src="npcs/dox.js"></script>
 
 
 </body>

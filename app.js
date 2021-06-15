@@ -14,15 +14,8 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-
-var name;
-
 io.on('connection', (socket) => {
   console.log('new user connected');
-  
-  socket.on('joining msg', (username) => {
-  	name = username;
-  });
   
   socket.on('disconnect', () => {
     console.log('user disconnected');
