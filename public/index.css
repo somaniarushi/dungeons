@@ -23,3 +23,9 @@ html {
     background-size: 1280px;
     background-color: black;
   }
+
+/* Hiding by default */
+
+#diamond{
+    display: none;
+}

@@ -27,9 +27,15 @@ app.get('/corny', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+
+// ------ Serve to myself -----
 app.get('/dm', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
+
+app.get('/checks', (req, res) => {
+  res.sendFile(__dirname + '/public/checks.html');
+})
 
 io.on('connection', (socket) => {
   console.log('new user connected');
@@ -42,6 +48,10 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('change', loc);         
     //sending message to all except the sender
   });
+
+  socket.on('visibility', (d) => {
+    socket.broadcast.emit('visibility', d);
+  })
 });
 
 server.listen(process.env.PORT || 3000, () => {
