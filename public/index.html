@@ -39,8 +39,8 @@
       }
 
       function getLocation() {
-        const X = ball.getBoundingClientRect().left;
-        const Y = ball.getBoundingClientRect().top;
+        const X = window.scrollX + ball.getBoundingClientRect().left;
+        const Y = window.scrollY + ball.getBoundingClientRect().top;
         return {X, Y};
       }
 
@@ -60,12 +60,10 @@
     };
   
     socket.on('change', function(loc){
-      let shiftX = ball.getBoundingClientRect().left;
-      let shiftY = ball.getBoundingClientRect().top;
+
 
       console.log("Change has been detected")
       console.log(loc.X, loc.Y)
-      console.log(shiftX, shiftY)
 
 
       ball.style.position = 'absolute';
@@ -74,9 +72,9 @@
 
       moveAt(loc.X, loc.Y);
 
-      function moveAt(pageX, pageY) {
-        ball.style.left = pageX - shiftX + 'px';
-        ball.style.top = pageY - shiftY + 'px';
+      function moveAt(shiftX, shiftY) {
+        ball.style.left = shiftX + 'px';
+        ball.style.top = shiftY + 'px';
       }
   });
   </script>
