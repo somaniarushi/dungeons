@@ -1,0 +1,22 @@
+{
+  "name": "assister",
+  "version": "1.0.0",
+  "description": "Web-socket enabled, online multi-share icon controlling platform.",
+  "main": "app.js",  
+  "scripts": {
+    "startdev": "nodemon ./app.js --exec babel-node -e js",
+    "start": "node ./app.js --exec babel-node -e js"
+  },
+  "author": "AMKS",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
