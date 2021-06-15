@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <img src="https://en.js.cx/clipart/ball.svg" id="ball">
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script>
+
+    var socket = io();
+
+    ball.onmousedown = function(event) {
+
+      console.log("an attempt to move")
+
+      let shiftX = event.clientX - ball.getBoundingClientRect().left;
+      let shiftY = event.clientY - ball.getBoundingClientRect().top;
+
+      ball.style.position = 'absolute';
+      ball.style.zIndex = 1000;
+      document.body.append(ball);
+
+      moveAt(event.pageX, event.pageY);
+
+      function moveAt(pageX, pageY) {
+        ball.style.left = pageX - shiftX + 'px';
+        ball.style.top = pageY - shiftY + 'px';
+      }
+
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+      }
+
+      function getLocation() {
+        const X = ball.getBoundingClientRect().left;
+        const Y = ball.getBoundingClientRect().top;
+        return {X, Y};
+      }
+
+      document.addEventListener('mousemove', onMouseMove);
+
+      ball.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        //trigger a web socket event
+        socket.emit('change', getLocation())
+        ball.onmouseup = null;
+      };
+
+    };
+
+    ball.ondragstart = function() {
+      return false;
+    };
+  
+    socket.on('change', function(loc){
+      let shiftX = ball.getBoundingClientRect().left;
+      let shiftY = ball.getBoundingClientRect().top;
+
+      console.log("Change has been detected")
+      console.log(loc.X, loc.Y)
+      console.log(shiftX, shiftY)
+
+
+      ball.style.position = 'absolute';
+      ball.style.zIndex = 1000;
+      document.body.append(ball);
+
+      moveAt(loc.X, loc.Y);
+
+      function moveAt(pageX, pageY) {
+        ball.style.left = pageX - shiftX + 'px';
+        ball.style.top = pageY - shiftY + 'px';
+      }
+  });
+  </script>
+
+
+</body>
+</html>
