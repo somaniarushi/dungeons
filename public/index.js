@@ -13,6 +13,7 @@ if (window.location.pathname === '/dm') {
     medcalf.style.display = 'block';
     fiona.style.display = 'block';
     fairy.style.display = 'block';
+    annis.style.display = 'block';
 }
 
 
