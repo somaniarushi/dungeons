@@ -1,5 +1,5 @@
 .icon {
-    width: 100px;
+    width: 50px;
     height: auto;
 }
 
@@ -7,16 +7,12 @@
     width: 200px;
 }
 
-.npc {
-    width: 80px;
-}
-
 .object{
     width: 50px;
 }
 
 html { 
-    background: url(images/bg.jpeg) no-repeat fixed; 
+    background: url(images/bg.png) no-repeat fixed; 
     -webkit-background-size: 1280px;
     -moz-background-size: 1280px;
     -o-background-size: 1280px;
@@ -26,6 +22,7 @@ html {
 
 /* Hiding by default */
 
-#jack, #jessie, #corny, #tristan, #dox, #diamond, #hannah, #medcalf, #fiona, #fairy, #annis{
+#jack, #jessie, #corny, #tristan, #dox, #diamond, #hannah, #medcalf, #fiona, #fairy, #annis, #kaiden, #deimos, #phobos
+, #chekov, #gustavo, #jose {
     display: none;
 }

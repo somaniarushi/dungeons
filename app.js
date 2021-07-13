@@ -27,6 +27,9 @@ app.get('/corny', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/kaiden', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 // ------ Serve to myself -----
 app.get('/dm', (req, res) => {

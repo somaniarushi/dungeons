@@ -5,15 +5,21 @@ if (window.location.pathname === '/dm') {
     jack.style.display = 'block';
     jessie.style.display = 'block';
     corny.style.display = 'block';
-    fairy.style.display = 'block';
+    // fairy.style.display = 'block';
     tristan.style.display = 'block';
     dox.style.display = 'block';
-    diamond.style.display = 'block';
+    // diamond.style.display = 'block';
     hannah.style.display = 'block';
     medcalf.style.display = 'block';
-    fiona.style.display = 'block';
-    fairy.style.display = 'block';
-    annis.style.display = 'block';
+    // fiona.style.display = 'block';
+    // fairy.style.display = 'block';
+    // annis.style.display = 'block';
+    kaiden.style.display = 'block';
+    deimos.style.display = 'block';
+    phobos.style.display = 'block';
+    chekov.style.display = 'block';
+    gustavo.style.display = 'block';
+    jose.style.display = 'block';
 }
 
 
