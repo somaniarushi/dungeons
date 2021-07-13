@@ -12,7 +12,7 @@
 }
 
 html { 
-    background: url(images/bg.png) no-repeat fixed; 
+    background: url(images/bg.PNG) no-repeat fixed; 
     -webkit-background-size: 1280px;
     -moz-background-size: 1280px;
     -o-background-size: 1280px;
