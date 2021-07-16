@@ -20,6 +20,9 @@ if (window.location.pathname === '/dm') {
     chekov.style.display = 'block';
     gustavo.style.display = 'block';
     jose.style.display = 'block';
+    robert.style.display = 'block';
+    chrisna.style.display = 'block';
+    lacroix.style.display = 'block';
 }
 
 

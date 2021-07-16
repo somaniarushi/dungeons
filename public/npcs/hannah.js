@@ -6,9 +6,9 @@ objHannah.onmousedown = function(event) {
 
     console.log("an attempt to move")
     
-    // if (window.location.pathname !== '/dm') {
-    //   return;
-    // }
+    if (window.location.pathname !== '/dm') {
+      return;
+    }
 
     let shiftX = event.clientX - objHannah.getBoundingClientRect().left;
     let shiftY = event.clientY - objHannah.getBoundingClientRect().top;

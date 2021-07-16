@@ -6,9 +6,9 @@ objChekov.onmousedown = function(event) {
 
     console.log("an attempt to move")
     
-    // if (window.location.pathname !== '/dm') {
-    //   return;
-    // }
+    if (window.location.pathname !== '/dm') {
+      return;
+    }
 
     let shiftX = event.clientX - objChekov.getBoundingClientRect().left;
     let shiftY = event.clientY - objChekov.getBoundingClientRect().top;

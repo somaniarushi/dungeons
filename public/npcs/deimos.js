@@ -6,9 +6,9 @@ objDeimos.onmousedown = function(event) {
 
     console.log("an attempt to move")
     
-    // if (window.location.pathname !== '/dm') {
-    //   return;
-    // }
+    if (window.location.pathname !== '/dm') {
+      return;
+    }
 
     let shiftX = event.clientX - objDeimos.getBoundingClientRect().left;
     let shiftY = event.clientY - objDeimos.getBoundingClientRect().top;

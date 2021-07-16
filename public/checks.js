@@ -66,11 +66,24 @@ chekov.addEventListener('change', (e) => {
 })
 
 gustavo.addEventListener('change', (e) => {
+    console.log('gustavo');
     socket.emit('visibility', {name: 'gustavo', status: e.target.checked})
 })
 
 jose.addEventListener('change', (e) => {
     socket.emit('visibility', {name: 'jose', status: e.target.checked})
+})
+
+robert.addEventListener('change', (e) => {
+    socket.emit('visibility', {name: 'robert', status: e.target.checked})
+})
+
+chrisna.addEventListener('change', (e) => {
+    socket.emit('visibility', {name: 'chrisna', status: e.target.checked})
+})
+
+lacroix.addEventListener('change', (e) => {
+    socket.emit('visibility', {name: 'lacroix', status: e.target.checked})
 })
 
 
