@@ -12,11 +12,6 @@
 }
 
 html { 
-    background: url(images/bg.PNG) no-repeat fixed; 
-    -webkit-background-size: 1280px;
-    -moz-background-size: 1280px;
-    -o-background-size: 1280px;
-    background-size: 1280px;
     background-color: black;
   }
 
@@ -25,4 +20,16 @@ html {
 #jack, #jessie, #corny, #tristan, #dox, #diamond, #hannah, #medcalf, #fiona, #fairy, #annis, #kaiden, #deimos, #phobos
 , #chekov, #gustavo, #jose, #robert, #chrisna, #lacroix {
     display: none;
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.overlayImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
 }

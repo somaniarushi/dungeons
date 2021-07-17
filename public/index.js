@@ -25,6 +25,8 @@ if (window.location.pathname === '/dm') {
     lacroix.style.display = 'block';
 }
 
+document.body.style.background = "url(images/bg.PNG) no-repeat fixed";
+
 
 // Visibility changing socket
 socket.on('visibility', function(input) {
@@ -36,5 +38,24 @@ socket.on('visibility', function(input) {
         }
     } else {
         elem.style.display = 'block';
+    }
+})
+
+// Background changing socket
+// Visibility changing socket
+socket.on('darkness', function(input) {
+    console.log(input)
+    const elems = document.getElementsByClassName(input.name);
+    console.log(elems);
+    if (input.status === false) {
+        if (window.location.pathname !== '/dm') {
+            for(item of elems) {
+                item.style.display = 'none';
+            }
+        }
+    } else {
+        for(item of elems) {
+            item.style.display = 'block';
+        }
     }
 })

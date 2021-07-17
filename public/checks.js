@@ -86,6 +86,30 @@ lacroix.addEventListener('change', (e) => {
     socket.emit('visibility', {name: 'lacroix', status: e.target.checked})
 })
 
+audi.addEventListener('change', (e) => {
+    socket.emit('darkness', {name: 'audi', status: e.target.checked})
+})
+
+lunch.addEventListener('change', (e) => {
+    socket.emit('darkness', {name: 'lunch', status: e.target.checked})
+})
+
+dungeon.addEventListener('change', (e) => {
+    socket.emit('darkness', {name: 'dungeon', status: e.target.checked})
+})
+
+tech.addEventListener('change', (e) => {
+    socket.emit('darkness', {name: 'tech', status: e.target.checked})
+})
+
+throne.addEventListener('change', (e) => {
+    socket.emit('darkness', {name: 'throne', status: e.target.checked})
+})
+
+war.addEventListener('change', (e) => {
+    socket.emit('darkness', {name: 'war', status: e.target.checked})
+})
+
 
 
 

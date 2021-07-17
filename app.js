@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/terminal', (req, res) => {
+  res.sendFile(__dirname + '/public/terminal.html');
+})
+
+
 //------ Serve to PCs -------//
 app.get('/jack', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
@@ -54,6 +59,10 @@ io.on('connection', (socket) => {
 
   socket.on('visibility', (d) => {
     socket.broadcast.emit('visibility', d);
+  })
+
+  socket.on('darkness', (d) => {
+    socket.broadcast.emit('darkness', d);
   })
 });
 
