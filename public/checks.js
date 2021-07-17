@@ -110,6 +110,23 @@ war.addEventListener('change', (e) => {
     socket.emit('darkness', {name: 'war', status: e.target.checked})
 })
 
+hallway.addEventListener('change', (e) => {
+    socket.emit('darkness', {name: 'hallway', status: e.target.checked})
+})
+
+h1.addEventListener('change', (e) => {
+    socket.emit('togglecam', {name: 'h1', status: e.target.checked})
+})
+
+h2.addEventListener('change', (e) => {
+    socket.emit('togglecam', {name: 'h2', status: e.target.checked})
+})
+
+l.addEventListener('change', (e) => {
+    socket.emit('togglecam', {name: 'l', status: e.target.checked})
+})
+
+
 
 
 

@@ -64,6 +64,18 @@ io.on('connection', (socket) => {
   socket.on('darkness', (d) => {
     socket.broadcast.emit('darkness', d);
   })
+
+  socket.on('toggle', (d) => {
+    socket.broadcast.emit('toggle', d);
+  })
+
+  socket.on('cutoff', (d) => {
+    socket.broadcast.emit('cutoff', d);
+  })
+
+  socket.on('togglecam', (d) => {
+    socket.broadcast.emit('togglecam', d);
+  })
 });
 
 server.listen(process.env.PORT || 3000, () => {

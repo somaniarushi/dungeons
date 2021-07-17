@@ -25,7 +25,14 @@ if (window.location.pathname === '/dm') {
     lacroix.style.display = 'block';
 }
 
-document.body.style.background = "url(images/bg.PNG) no-repeat fixed";
+audion.style.display = 'none';
+lunchoff.style.display = 'none';
+dungeonon.style.display = 'none';
+techoff.style.display = 'none';
+throneon.style.display = 'none';
+waron.style.display = 'none';
+laseroffcams.style.display = 'none';
+hallwayoff.style.display = 'none';
 
 
 // Visibility changing socket
@@ -41,7 +48,6 @@ socket.on('visibility', function(input) {
     }
 })
 
-// Background changing socket
 // Visibility changing socket
 socket.on('darkness', function(input) {
     console.log(input)
@@ -57,5 +63,52 @@ socket.on('darkness', function(input) {
         for(item of elems) {
             item.style.display = 'block';
         }
+    }
+})
+
+//light status toggle
+socket.on('toggle', function(input) {
+    console.log(input);
+    const elems = document.getElementsByClassName(input.name);
+    for(item of elems) {
+        if (item.style.display === 'none') {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    }
+});
+
+// Visibility changing socket
+socket.on('cutoff', function(input) {
+    console.log(input)
+    const elems = document.getElementsByClassName(input.name);
+    console.log(elems);
+
+    let number_nones = 0;
+
+    for (item of elems) {
+        if (item.style.display === 'none') {
+            number_nones+= 1;
+        }
+    }
+    if (number_nones === 2) {
+        elems[0].style.display = 'block';
+    } else {
+        for (item of elems) {
+            item.style.display = 'none';
+        }
+    }
+})
+
+socket.on('togglecam', function(input) {
+    console.log(input);
+    const elem = document.getElementById(input.name);
+    console.log(elem);
+    if(elem.style.display === 'none') {
+        console.log("get in here!")
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
     }
 })
