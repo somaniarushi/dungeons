@@ -20,6 +20,7 @@ html {
 #jack, #jessie, #corny, #tristan, #dox, #diamond, #hannah, #medcalf, #fiona, #fairy, #annis, #kaiden, #deimos, #phobos
 , #chekov, #gustavo, #jose, #robert, #chrisna, #lacroix {
     display: none;
+    align: left;
 }
 
 .imageWrapper {
