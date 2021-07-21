@@ -1,6 +1,8 @@
 .icon {
+    position: absolute;
     width: 40px;
     height: auto;
+    z-index: 1000000;
 }
 
 .monster {
@@ -12,7 +14,7 @@
 }
 
 html { 
-    background-color: black;
+    /* background-color: black; */
   }
 
 /* Hiding by default */
@@ -31,7 +33,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
 }
